@@ -1,0 +1,13 @@
+
+
+public class RecDieRollerDriver {
+	
+	
+    public static void main(String[] args) {
+    	
+        RecDieRoller rollTheDie = new RecDieRoller();
+        rollTheDie.roll();
+        
+    }//end main
+    
+}//end class
