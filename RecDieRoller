@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class RecDieRoller {
+	
+    private Random random;
+
+    public RecDieRoller() {
+        this.random = new Random();
+    }//end RecDieRoller
+
+    public void roll() {
+        int roll = random.nextInt(6);
+        System.out.println("You rolled: " + roll);
+        if (roll != 2) {
+            roll(); 
+        }//end if
+        
+    }//end roll
+    
+}//end class
