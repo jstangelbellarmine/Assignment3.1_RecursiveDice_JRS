@@ -1,13 +1,20 @@
-
-
 public class RecDieRollerDriver {
-	
-	
     public static void main(String[] args) {
     	
-        RecDieRoller rollTheDie = new RecDieRoller();
-        rollTheDie.roll();
+    	
+        final int NUMOFTRIALS = 1000;
+        int totalRolls = 0;
+
         
+        for (int i = 0; i < NUMOFTRIALS; i++) {
+            RecDieRoller dieRoller = new RecDieRoller();
+            totalRolls += dieRoller.roll();
+        }//end for loop
+
+        double averageRolls = (double) totalRolls / NUMOFTRIALS;
+        System.out.println("Average number of rolls to get a 2: " + averageRolls);
+    
     }//end main
     
 }//end class
+
