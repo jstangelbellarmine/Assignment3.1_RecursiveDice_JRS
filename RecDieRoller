@@ -1,20 +1,23 @@
-import java.util.*;
+import java.util.Random;
 
 public class RecDieRoller {
-	
     private Random random;
 
     public RecDieRoller() {
         this.random = new Random();
     }//end RecDieRoller
 
-    public void roll() {
-        int roll = random.nextInt(6);
-        System.out.println("You rolled: " + roll);
-        if (roll != 2) {
-            roll(); 
-        }//end if
-        
+    /**
+     * Task: Rolls a dice, stop when 2 is rolled, then 
+     * add 1 to current roll. Recursive method to roll a die until a 2 is rolled.
+     * @return Number of rolls until a 2.
+     */
+    public int roll() {
+        int rollResult = random.nextInt(6) + 1; 
+        System.out.println("Rolled: " + rollResult);
+        if (rollResult != 2) {
+            return roll() + 1; 
+        }//end if statement
+        return 1; 
     }//end roll
-    
 }//end class
